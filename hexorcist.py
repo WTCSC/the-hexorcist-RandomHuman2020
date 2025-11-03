@@ -3,6 +3,7 @@ from os import environ
 import platform
 import string
 
+# Microsoft uses a different variable for the user's username than linux or MacOS, this is needed to make it work correctly cross-platform.
 if platform.system() == "Linux" or platform.system() == "Darwin":
     username = environ.get("USER")
 elif platform.system() == "Windows":
@@ -10,7 +11,7 @@ elif platform.system() == "Windows":
 
 print(f"Welcome to the Hexorcist, {username}.")
 
-
+# This while loop allows the script to continue asking for the same input until the user inputs a valid number. The same description applies to the following two loops.
 good_input = False
 while not good_input:
     in_num = input("Enter the number you wish to convert.\n> ")

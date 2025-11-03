@@ -1,5 +1,12 @@
+"""
+This file only exists to work around Pytest's behaviour if you don't put everything in a def block.
+In such a situation, Pytest will run the entire script, therefore breaking everything.
+"""
+
 digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+
+# This function converts a number into decimal from its original base.
 def to_decimal(input_string, original_base):
     total_value = 0
     power = 0
@@ -23,7 +30,7 @@ def to_decimal(input_string, original_base):
 
 
 
-
+# This function converts a number into the target base from decimal.
 def from_decimal(decimal_number, target_base):
     try:
         int(decimal_number)
