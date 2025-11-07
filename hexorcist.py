@@ -3,7 +3,7 @@ from os import environ
 import platform
 import string
 
-# Microsoft uses a different variable for the user's username than linux or MacOS, this is needed to make it work correctly cross-platform.
+# Microsoft uses a different variable for the user's username than Linux or macOS, this is needed to make it work correctly cross-platform.
 if platform.system() == "Linux" or platform.system() == "Darwin":
     username = environ.get("USER")
 elif platform.system() == "Windows":
